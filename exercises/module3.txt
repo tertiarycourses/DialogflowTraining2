@@ -1,0 +1,127 @@
+# Intent
+
+# 0_1_Say_Veggies
+lettuce
+kale
+kangkong
+cumcumber
+eggplant
+
+
+# 0_2_Say_Animals
+cat
+dog
+bird
+elephant
+fish
+
+# Entity
+
+# Veggies
+lettuce
+kale
+kangkong
+cumcumber
+eggplant
+
+# Animals
+cat
+dog
+bird
+elephant
+fish
+
+
+
+# Ex: Intent and Entity
+
+# getOrder intent
+Can I get a chocolate waffle?
+Could i have a bluebery waffle
+I like to a waffle 
+
+# waffleFlavors Entity
+chocolate, choco
+peanut, peanut butter
+strawberry
+blueberry
+
+
+# Responses
+
+you say $Animals
+you say $Veggies
+
+
+# Ex: Responses
+
+Sure. One $waffleFlavors waffle coming right up. 
+How would you like to pay? Cash or Paynow?
+
+# Custom Payload
+
+{
+  "facebook": {
+    "text": "Let us know which product you are interested?"
+  }
+}
+
+{
+  "facebook": {
+    "attachment": {
+      "type": "image",
+      "payload": {
+      "url" : "https://www.tertiaryrobotics.com/pub/media/catalog/product/cache/74c1057f7991b4edb2bc7bdaa94de933/a/r/arduino-starter-kit-2.jpg"}
+    }
+  }
+}
+
+{
+  "facebook": {
+    "attachment": {
+      "type": "audio",
+      "payload": {
+        "url": "https://example.com/audio/test.mp3"
+      }
+    }
+  }
+}
+    
+
+{
+  "facebook": {
+    "attachment": {
+      "type": "video",
+      "payload": {
+        "url": "https://examples.dialogflow.com/RichMessagesFiles/studebaker_1950.mp4"
+      }
+    }
+  }
+}
+
+
+{
+  "facebook": {
+    "attachment": {
+      "type": "file",
+      "payload": {
+        "url": "https://examples.dialogflow.com/RichMessagesFiles/LoremIpsum.pdf"
+      }
+    }
+  }
+}
+
+
+# Context
+
+have_Veggies
+have_Animals
+
+Training: what is the color
+
+Response: the color  of #have_animals.Animals is black
+Response: the color #have_veggies.Veggies is green
+
+
+
+
